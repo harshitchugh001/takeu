@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Dynamic One-Page Website with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a dynamic one-page website built with React, featuring a banner with a countdown timer and an internal dashboard for managing banner settings. The backend is implemented using an in-memory database for simplicity and can be easily adapted to use MySQL if needed.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Website Layout:** A simple, clean one-page layout that optionally displays a banner.
+- **Frontend Countdown Display:** A countdown timer on the banner, showing the remaining time before it disappears.
+- **Internal Dashboard:** Allows users to:
+  - Toggle the banner's visibility.
+  - Update the banner's description.
+  - Set a timer for how long the banner is displayed.
+  - Add a clickable link to the banner.
+- **Database Integration:** Uses an in-memory database to store the banner's content, including description, timer settings, and link.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend:** React, Tailwind CSS
+- **Backend:** Node.js, Express
+- **Database:** In-memory (easy to switch to MySQL)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js and npm installed on your machine
 
-### `npm run build`
+## Branch Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend Code:** Located in the `frontend` branch.
+- **Backend Code:** Located in the `backend` branch.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Frontend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Switch to the frontend branch and clone the repository:**
 
-### `npm run eject`
+   ```bash
+   git clone -b frontend <repository-url> frontend
+   cd frontend
+2. ***Install frontend dependencies:***
+    ```bash
+    npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3 .***Backend***  Switch to the backend branch and clone the repository:
+   
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4.***Install backend dependencies:***
 
-## Learn More
+bash
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm install
+Running the Application
+5 ***Frontend
+Navigate to the frontend directory:***
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+cd frontend
+Start the frontend server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+npm start
+This will start the React application on http://localhost:3000.
 
-### Analyzing the Bundle Size
+6.***Backend
+Navigate to the backend directory:***
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+cd backend
+Start the backend server:
 
-### Advanced Configuration
+npm start
+The backend server will run on http://localhost:5000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+***Switching to MySQL (Optional)
+If you need persistent data storage and choose to use MySQL:***
 
-### `npm run build` fails to minify
+***Set up a MySQL database.***
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Update the backend configuration to connect to your MySQL database.
+
+Install necessary MySQL packages:
+
+
+
+npm install mysql
+Modify database queries to use MySQL.
+
+Note: The backend uses an in-memory database, which allows for simple hosting and quick setup. Data will not persist after the server is restarted. If you require persistent storage, consider switching to MySQL.
+ Additionally, starting the backend server might take some time; please be patient while it initializes.
